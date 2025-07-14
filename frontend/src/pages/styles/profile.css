@@ -1,0 +1,553 @@
+/* Profile Page Styles - Enhanced */
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #166088;
+  --accent-color: #4fc3f7;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --text-color: #333;
+  --sidebar-width: 200px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+.profile-home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+/* Sidebar - Consistent with Email Client */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: #ffffff;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.logo {
+  padding: 0 20px 20px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--medium-gray);
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 15px;
+}
+
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 12px 15px;
+  font-size: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.menu-item:hover {
+  background-color: rgba(74, 111, 165, 0.1);
+  color: var(--primary-color);
+}
+
+.menu-item.active {
+  background-color: rgba(74, 111, 165, 0.15);
+  color: var(--primary-color);
+  font-weight: 500;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 12px;
+}
+
+.back-button {
+  position: absolute;
+  bottom: 30px; /* push it a little to the bottom */
+  left: 30px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: var(--primary-color-dark, #2c3e50);
+  transform: translateY(-2px);
+}
+
+/* Main Content Area */
+.inbox {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  
+}
+
+.inbox-header h1 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 0 0 25px 0;
+}
+
+/* Profile Content */
+.email-list {
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow-y: auto;
+}
+
+.profile-section {
+  margin-bottom: 30px;
+}
+
+.profile-section h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+/* Personal Information Layout */
+.personal-info-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.profile-picture-container {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-picture-container label {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.profile-pic-preview {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--medium-gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.profile-pic-preview:hover {
+  transform: scale(1.03);
+}
+.profile-pic-preview.default-pic {
+  margin-top: 20px; /* or adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.file-input-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: block;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white !important;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.file-input-label:hover {
+  background-color: var(--secondary-color);
+}
+
+.personal-details-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--dark-gray);
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+}
+
+.input-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Security Section */
+.security-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.security-box {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.security-box h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.password-input-group {
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.save-btn {
+  background-color: var(--success-color);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 220px;
+  }
+  
+  .inbox {
+    margin-left: 220px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-home {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  .menu {
+    flex-direction: row;
+    order: 1;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .back-button {
+    order: 2;
+    margin: 0 0 0 auto;
+    padding: 10px 15px;
+  }
+  
+  .inbox {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .personal-info-container {
+    flex-direction: column;
+  }
+  
+  .profile-picture-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.security-box {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.security-box:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.security-box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.email-domain {
+  position: absolute;
+  right: 10px;
+  color: gray;
+  font-size: 0.9em;
+  pointer-events: none;
+}
+/* Add these fixes at the end of your existing CSS */
+
+/* Position Input Fix */
+.input-group input[name="job_title"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* File Input Styling */
+.file-input-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-input-label {
+  display: block;
+  padding: 8px 15px;
+  background: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.file-input-label:hover {
+  background: #2980b9;
+}
+
+/* Modal Positioning Fix */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.security-modal {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 90%;
+}
+
+/* Error Message Styling */
+.alert-message {
+  color: #e74c3c;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background: #f8d7da;
+}
+
+/* Overlay covers the entire screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* above most content */
+}
+
+/* Modal box */
+.security-modal {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Modal title */
+.security-modal h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color:#3498db;
+  font-weight: 600;
+}
+
+/* Modal paragraph */
+.security-modal p {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Input field */
+.security-modal input[type="password"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+.security-modal input[type="password"]:focus {
+  border-color: #0052cc;
+  outline: none;
+}
+
+/* Button container */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Cancel button style */
+.cancel-btn {
+  background: transparent;
+  border: 2px solid #888;
+  color: #555;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.cancel-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Confirm button style */
+.confirm-btn {
+  background-color: #0052cc;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #003d99;
+}
