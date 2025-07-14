@@ -2,4 +2,4 @@
 - pip (Python package manager)
 - MySQL
 - Virtualenv
--Node.js
+- Node.js
