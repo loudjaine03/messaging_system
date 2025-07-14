@@ -1,9 +1,0 @@
-{
-  "name": "messaging-system",
-  "version": "1.0.0",
-  "description": "Internal messaging system for CERIST project",
-  "main": "index.js",
-  "scripts": {},
-  "author": "",
-  "license": "ISC"
-}
