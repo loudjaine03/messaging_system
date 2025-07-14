@@ -1,0 +1,5 @@
+- Python 3.10+
+- pip (Python package manager)
+- MySQL
+- Virtualenv
+-Node.js
