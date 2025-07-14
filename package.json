@@ -1,17 +1,9 @@
 {
-  "name": "projet",
+  "name": "messaging-system",
   "version": "1.0.0",
-  "description": "projet email",
+  "description": "Internal messaging system for CERIST project",
   "main": "index.js",
-  "type": "commonjs",
-  "keywords": [],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "bensa",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "eeemail"
-  }
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
 }
