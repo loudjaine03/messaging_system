@@ -1,12 +1,13 @@
 # Système de Messagerie Interne
 
-Système de messagerie interne sécurisé développé dans le cadre d’un projet de fin d’études pour la Division de la Sécurité (DSI) au sein du centre de recherche CERIST.
+Système de messagerie interne sécurisé développé dans le cadre d’un projet de fin d’études pour la Division de la Sécurité Informatique
+(DSI) au sein du centre de recherche CERIST.
 
 ## Contexte du Projet
 
-Ce projet a été réalisé dans le cadre de ma formation en **Licence en Systèmes d’Information**. Il répond au besoin d’une solution de communication interne sécurisée pour une entité sensible, avec un accent particulier sur la confidentialité, l’analyse des risques, et le contrôle d’accès.
+Ce projet a été réalisé dans le cadre de formation en **Licence en Systèmes d’Information**. Il répond au besoin d’une solution de communication interne sécurisée pour une entité sensible, avec un accent particulier sur la confidentialité, l’analyse des risques, et le contrôle d’accès.
 
-### 🔧 Responsabilités principales
+### Responsabilités principales
 
 - Conception et développement d’une application web full-stack.
 - Mise en place d’une architecture de sécurité multicouche, incluant :
@@ -18,7 +19,7 @@ Ce projet a été réalisé dans le cadre de ma formation en **Licence en Systè
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 - **Frontend** : React.js, CSS
 - **Backend** : Flask (Python)
@@ -27,18 +28,7 @@ Ce projet a été réalisé dans le cadre de ma formation en **Licence en Systè
 
 ---
 
-## 🚀 Fonctionnalités principales
-
-- Authentification avec vérification à deux facteurs (2FA)
-- Envoi et réception de messages internes
-- Interface utilisateur moderne et responsive
-- Gestion des utilisateurs et des rôles
-- Analyse automatique des fichiers et liens
-- Chiffrement des messages sensibles
-
----
-
-## 📦 Installation
+## Installation
 
 ```bash
 # Cloner le dépôt
