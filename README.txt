@@ -1,7 +1,6 @@
 # Système de Messagerie Interne
 
-Système de messagerie interne sécurisé développé dans le cadre d’un projet de fin d’études pour la Division de la Sécurité Informatique
-(DSI) au sein du centre de recherche CERIST.
+Système de messagerie interne sécurisé développé dans le cadre d’un projet de fin d’études pour la Division de la Sécurité Informatique (DSI) au sein du centre de recherche CERIST.
 
 ## Contexte du Projet
 
